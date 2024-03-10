@@ -20,11 +20,11 @@ export default function TicTacToe() {
     const winner = calculateWinner(squares);
     let status = "";
     if (winner) {
-      status = `Winner: ${winner}`;
+      status = `${winner} Menang!`;
     } else if (history.length === 10 && !winner) {
-      status = "It's a tie!";
+      status = "Seri!";
     } else {
-      status = `Turn: ${isNext ? "X" : "O"}`;
+      status = `Giliran si ${isNext ? "X" : "O"}`;
     }
 
     return (
@@ -64,7 +64,7 @@ export default function TicTacToe() {
     }
 
     const moves = history.map((squares, move) => {
-      let description = move > 0 ? `Go to move ${move}` : `Go to game start`;
+      let description = move > 0 ? `Mundur ke langkah #${move}` : `Mundur ke awal`;
       return (
         <li key={move}>
           <button onClick={() => jumpTo(move)}>{description}</button>
