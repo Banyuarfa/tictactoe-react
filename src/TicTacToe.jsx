@@ -24,7 +24,7 @@ export default function TicTacToe() {
     } else if (history.length === 10 && !winner) {
       status = "Seri!";
     } else {
-      status = `Giliran si ${isNext ? "X" : "O"}`;
+      status = `Giliran ${isNext ? "X" : "O"}`;
     }
 
     return (
